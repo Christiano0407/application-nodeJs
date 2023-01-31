@@ -7,6 +7,9 @@ import express from 'express';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+//** ===  Call Router === */
+import router from './routes/index.js';
+
 //**! App === */
 const app = express();
 //**! PORT === */
@@ -20,13 +23,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.set(`views`, join(__dirname, `views`));
 app.set(`view engine`, `ejs`);
 
-//**! Routing === */
+//**! Routing === > Router */
 /* app.get(`/`, (req, res) => {
   res.send(`Hello World!!`);
 }); */
-app.get(`/`, (req, res) => {
-  res.render(`index`);
-});
+app.use(router);
 
 //**! Listen === */
 app.listen(port, () => {
