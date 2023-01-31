@@ -28,6 +28,8 @@ app.set(`view engine`, `ejs`);
   res.send(`Hello World!!`);
 }); */
 app.use(router);
+//** === CSS */
+app.use(express.static(join(__dirname, `public`)));
 
 //**! Listen === */
 app.listen(port, () => {
