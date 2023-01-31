@@ -1,0 +1,32 @@
+{
+  "name": "application-nodejs",
+  "version": "1.0.0",
+  "description": "creating first application with nodeJs",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "startPlus": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christiano0407/application-nodeJs.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodeJs"
+  ],
+  "author": "Chris04",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Christiano0407/application-nodeJs/issues"
+  },
+  "homepage": "https://github.com/Christiano0407/application-nodeJs#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
