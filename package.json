@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "creating first application with nodeJs",
   "main": "./src/index.js",
+  "type": "module",
   "scripts": {
     "start": "node ./src/index.js",
-    "startPlus": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js"
   },
   "repository": {
     "type": "git",
