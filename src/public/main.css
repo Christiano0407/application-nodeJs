@@ -9,6 +9,8 @@ html {
 body {
   width: 100%;
   font-family: 'Spicy Rice', cursive;
+  background-color: #222222;
+  color: #f2f2f2;
 }
 ul {
   list-style: none;
