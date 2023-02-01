@@ -181,6 +181,72 @@ npm i bootstrap@5.3.0-alpha1
 
 ### Project: Application With Node Js
 
+> Index With Express
+
+```javascript
+
+//** === Express === (Type: module) */
+//const express =  require(`express`);
+//import ejs from `ejs`;
+import express from 'express';
+//** === Add Routing Absolute */
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+//** ===  Call Router === */
+import router from './routes/index.js';
+
+//**! App === */
+const app = express();
+//**! PORT === */
+const port = process.env.port || 3000;
+
+//**? === EJS / View Engine & Extend HTML & Rout View */
+const __dirname = dirname(fileURLToPath(import.meta.url));
+//const __dirname = path.dirname(new URL(import.meta.url).pathname);
+//console.log(join(__dirname, `views`));
+
+app.set(`views`, join(__dirname, `views`));
+app.set(`view engine`, `ejs`);
+
+//**! Routing === > Router */
+/* app.get(`/`, (req, res) => {
+  res.send(`Hello World!!`);
+}); */
+app.use(router);
+//** === CSS */
+app.use(express.static(join(__dirname, `public`)));
+
+//**! Listen === */
+app.listen(port, () => {
+  console.log(`Server is running in Port: http://localhost:${port}`);
+});
+
+```
+
+> Router
+
+```javascript
+
+import { Router } from 'express';
+//** === app === router */
+const router = Router();
+
+router.get(`/`, (req, res) => {
+  res.render(`index`, { title: `Home | First Website with Node` });
+});
+router.get(`/about`, (req, res) => {
+  res.render(`about`, { title: `About | About Me` });
+});
+router.get(`/contact`, (req, res) => {
+  res.render(`contact`, { title: `Contact | Company Contact` });
+});
+
+//** === Export === */
+export default router;
+
+```
+
 > Home Application
 
 ![Home](./src/img/deskHome.png)
