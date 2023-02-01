@@ -272,3 +272,38 @@ export default router;
 > Contact Mobile
 
 ![Contact_Mobile](./src/img/mobContact.png)
+
+### Deploy GitHub Pages
+
+> GiHub Pages
+
+[gitHub_pages](https://www.npmjs.com/package/gh-pages)
+
+> Npm Instal
+
+```javascript
+npm i gh-pages
+
+npm install gh-pages --save-dev
+
+```
+
+> Script
+
+```javascript
+
+"scripts": {
+  "deploy": "gh-pages -d dist"
+}
+
+```
+
+```javascript
+
+npm run deploy
+
+```
+
+> Pages Application
+
+[application_node](https://christiano0407.github.io/application-nodeJs/)
